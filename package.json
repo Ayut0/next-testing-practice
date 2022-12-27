@@ -29,15 +29,19 @@
     "@types/jest": "^29.2.4",
     "babel-jest": "^29.3.1",
     "jest": "^29.3.1",
-    "jest-css-modules": "^2.1.0"
+    "jest-css-modules": "^2.1.0",
+    "jest-environment-jsdom": "^29.3.1"
   },
   "jest": {
-    "testPathIgnorePatterns":[
+    "testEnvironment": "jsdom",
+    "bail": 1,
+    "verbose": true,
+    "testPathIgnorePatterns": [
       "<rootDir>/.next/",
       "<rootDir>/node_modules/"
     ],
     "moduleNameMapper": {
-      "\\.(css)$":"<rootDir>/node_modules/jest-css-modules"
+      "\\.(css)$": "<rootDir>/node_modules/jest-css-modules"
     }
   }
 }
